@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style_portifolio.css">
+</head>
+<body>
+
+<section class="portfolio" id="portfolio">
+    
+    <header class="portfolio-header">
+        <div class="header-top">
+            <a href="index_principal.html" class="back-link">
+        <i class="fa-solid fa-chevron-left"></i>
+             </a>
+    <h2>Portfólio e Contatos</h2>
+</div>
+        
+        <nav class="contact-links">
+            <a href="https://github.com/saragamoraes" target="_blank">
+                github.com/saragamoraes <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/sara-gabrielle" target="_blank">
+                in/sara-gabrielle <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:saragamoraes@gmail.com">
+                saragamoraes@gmail.com <i class="fa-solid fa-envelope"></i>
+            </a>
+        </nav>
+    </header>
+
+    <div class="portfolio-banner">
+        <p>Projetos desenvolvidos, para saber mais acesse minhas redes.</p>
+    </div>
+
+    <div class="container-projetos">
+        
+        <article class="card-projeto">
+            <div class="galeria-container">
+                <button class="seta btn-prev" onclick="setaScroll(this, -1)">&#10094;</button>
+                <button class="seta btn-next" onclick="setaScroll(this, 1)">&#10095;</button>
+                
+                <div class="galeria-projeto">
+                    <img src="img/poliwear.png" alt="Projeto 1 - Foto 1">
+                    <img src="img/poliwear2.png" alt="Projeto 1 - Foto 2">
+                    <img src="img/poliwear3.png" alt="Projeto 1 - Foto 3">
+                </div>
+            </div>
+            <div class="projeto-info">
+                <p>Poli Wear é um site desenvolvido para simplificar a compra de camisetas escolares e de cursos, substituindo o processo manual de pagamento e evitando atrasos. Ele foi projetado para resolver um problema real dentro do ambiente escolar, trazendo praticidade e organização.</p>
+            </div>
+        </article>
+
+        <article class="card-projeto">
+            <div class="galeria-container">
+                <button class="seta btn-prev" onclick="setaScroll(this, -1)">&#10094;</button>
+                <button class="seta btn-next" onclick="setaScroll(this, 1)">&#10095;</button>
+                
+                <div class="galeria-projeto">
+                    <img src="img/adamastor .png" alt="Projeto 2 - Foto 1">
+                    <img src="img/adamastor2.png" alt="Projeto 2 - Foto 2">
+                    <img src="img/adamastor3.png" alt="Projeto 2 - Foto 3">
+                </div>
+            </div>
+            <div class="projeto-info">
+                <p>O ADM Soluções é uma aplicação web cliente-servidor desenvolvida para automatizar e gerenciar o ciclo completo de agendamentos realizados por um prestador de serviços. O projeto foi idealizado para substituir a gestão manual, fornecendo uma interface intuitiva.</p>
+            </div>
+        </article>
+
+        <article class="card-projeto">
+            <div class="galeria-container">
+                <button class="seta btn-prev" onclick="setaScroll(this, -1)">&#10094;</button>
+                <button class="seta btn-next" onclick="setaScroll(this, 1)">&#10095;</button>
+                
+                <div class="galeria-projeto">
+                    <img src="img/cambio.png" alt="Projeto 3 - Foto 1">
+                    <img src="img/cambio2.png" alt="Projeto 3 - Foto 2">
+                    <img src="img/cambio3.png" alt="Projeto 3 - Foto 3">
+                </div>
+            </div>
+            <div class="projeto-info">
+                <p>O projeto Câmbio Fácil foi pensado para auxiliar usuários que precisam realizar conversões de valores entre diferentes moedas de forma rápida, prática e confiável. O projeto visa entregar uma alternativa simples e eficiente e que garanta acesso a informações atualizadas de câmbio.</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<script>
+    function setaScroll(botao, direcao) {
+        const galeria = botao.parentElement.querySelector('.galeria-projeto');
+        const larguraCard = galeria.offsetWidth;
+        galeria.scrollBy({
+            left: larguraCard * direcao,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+</body>
+</html>

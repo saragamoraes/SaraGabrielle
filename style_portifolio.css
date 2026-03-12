@@ -1,0 +1,194 @@
+:root {
+    --bege-fundo: #EFEFEF;
+    --bege-card: #E3DAC9;
+    --vinho-escuro: #6E2A3E;
+    --vinho-medio: #97475E;
+    --texto-cor: #333;
+    --texto-links: #555;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bege-fundo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HEADER FIXO */
+.portfolio-header {
+    background-color: var(--bege-card);
+    padding: 28px 0;
+    text-align: center;
+    border-bottom: 2px solid var(--vinho-escuro);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.header-top h2 {
+    color: var(--vinho-escuro);
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.back-link {
+    position: absolute;
+    left: 8%;
+    color: var(--vinho-escuro);
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+}
+
+/* LINKS DE CONTATO */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: var(--texto-links);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.contact-links a i {
+    color: var(--vinho-escuro);
+    font-size: 1.2rem;
+}
+
+/* BANNER (Compensando o header fixo) */
+.portfolio-banner {
+    display: flex;
+    justify-content: center;
+    margin: 180px 0 40px 0; /* Espaço para não sumir atrás do header fixo */
+}
+
+.portfolio-banner p {
+    background-color: var(--vinho-medio);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 80%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* GRADE DE PROJETOS */
+.container-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 5% 40px 5%;
+}
+
+.card-projeto {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-projeto:hover {
+    transform: translateY(-8px);
+}
+
+/* GALERIA E BARRA */
+.galeria-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.galeria-projeto {
+    display: flex;
+    overflow-x: auto; 
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    height: 220px;
+}
+
+.galeria-projeto img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+/* Barra de rolagem personalizada (indicador embaixo da foto) */
+.galeria-projeto::-webkit-scrollbar {
+    height: 6px;
+}
+
+.galeria-projeto::-webkit-scrollbar-thumb {
+    background: var(--vinho-medio);
+    border-radius: 10px;
+}
+
+/* SETAS QUE APARECEM NO HOVER */
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+   color: #E3DAC9;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0; /* Escondida por padrão */
+    transition: all 0.4s ease;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+.card-projeto:hover .seta {
+    opacity: 1; /* Aparece no hover do card */
+}
+
+.seta:hover {
+    color: var(--vinho-medio);
+    transform: translateY(-50%) scale(1.2);
+}
+
+.btn-prev { left: 10px; }
+.btn-next { right: 10px; }
+
+/* INFORMAÇÕES */
+.projeto-info {
+    padding: 20px;
+    background-color: white;
+}
+
+.projeto-info p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    text-align: center;
+}
