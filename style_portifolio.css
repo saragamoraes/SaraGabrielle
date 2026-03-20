@@ -14,26 +14,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* HEADER FIXO */
+
 .portfolio-header {
     background-color: var(--bege-card);
     padding: 28px 0;
     text-align: center;
     border-bottom: 2px solid var(--vinho-escuro);
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    position: relative;
+    
 }
 
-.header-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 25px;
-}
 
 .header-top h2 {
     color: var(--vinho-escuro);
@@ -55,7 +46,7 @@ body {
     transform: translateX(-5px);
 }
 
-/* LINKS DE CONTATO */
+
 .contact-links {
     display: flex;
     justify-content: center;
@@ -77,11 +68,11 @@ body {
     font-size: 1.2rem;
 }
 
-/* BANNER (Compensando o header fixo) */
+
 .portfolio-banner {
     display: flex;
     justify-content: center;
-    margin: 180px 0 40px 0; /* Espaço para não sumir atrás do header fixo */
+    margin: 180px 0 40px 0; 
 }
 
 .portfolio-banner p {
@@ -95,7 +86,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* GRADE DE PROJETOS */
+
 .container-projetos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -117,7 +108,7 @@ body {
     transform: translateY(-8px);
 }
 
-/* GALERIA E BARRA */
+
 .galeria-container {
     position: relative;
     width: 100%;
@@ -141,7 +132,7 @@ body {
     scroll-snap-align: start;
 }
 
-/* Barra de rolagem personalizada (indicador embaixo da foto) */
+
 .galeria-projeto::-webkit-scrollbar {
     height: 6px;
 }
@@ -151,7 +142,7 @@ body {
     border-radius: 10px;
 }
 
-/* SETAS QUE APARECEM NO HOVER */
+
 .seta {
     position: absolute;
     top: 50%;
@@ -162,13 +153,13 @@ body {
     font-size: 2.5rem;
     cursor: pointer;
     z-index: 10;
-    opacity: 0; /* Escondida por padrão */
+    opacity: 0; 
     transition: all 0.4s ease;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
 }
 
 .card-projeto:hover .seta {
-    opacity: 1; /* Aparece no hover do card */
+    opacity: 1; 
 }
 
 .seta:hover {
@@ -179,7 +170,7 @@ body {
 .btn-prev { left: 10px; }
 .btn-next { right: 10px; }
 
-/* INFORMAÇÕES */
+
 .projeto-info {
     padding: 20px;
     background-color: white;
@@ -191,4 +182,35 @@ body {
     line-height: 1.4;
     margin: 0;
     text-align: center;
+}
+
+
+.galeria-mobile {
+    height: 450px; 
+    background-color: #f9f9f9; 
+}
+
+.galeria-mobile img {
+    width: auto;
+    height: 90%; 
+    margin: auto; 
+    object-fit: contain; 
+}
+
+
+.header-top {
+    position: relative; 
+    margin-bottom: 0;   
+    padding: 20px 0;   
+}
+
+
+.portfolio-container {
+    margin-top: 0 !important; 
+    padding-top: 0 !important;
+}
+
+
+.portfolio-banner {
+    margin-top: 20px; 
 }

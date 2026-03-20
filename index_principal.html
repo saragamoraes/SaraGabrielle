@@ -8,83 +8,114 @@
 </head>
 <body>
 
-   <section class="home">
-    <div class="home-content">
-        <h1 class="nome">Sara Gabrielle Moraes Da Silva</h1>
-        <p class="info">02/08/2006 - 19 anos<br>Técnica em Desenvolvimento de Sistemas - Etec <br>
-            Estudante de Análise e Desenvolvimento de Sistemas - Fatec
-</p>
-        
-        <h2 class="titulo-sessao">Objetivo Profissional</h2>
-        <p class="texto-objetivo">
-            Estudante de Análise e Desenvolvimento de Sistemas, com interesse em atuar na área de Tecnologia. Busco oportunidade de estágio ou vaga júnior, contribuindo para a melhoria contínua dos projetos e do negócio.
-        </p>
+    <section class="home">
+        <div class="home-content">
+            <h1 class="nome">Sara Gabrielle Moraes Da Silva</h1>
+            <p class="info">
+                02/08/2006 - 19 anos<br>
+                Técnica em Desenvolvimento de Sistemas - Etec <br>
+                Estudante de Análise e Desenvolvimento de Sistemas - Fatec
+            </p>
+            
+            <h1 class="nome">Certificações</h1>
+            <p class="info">
+                Instituto de Vencedores - Sara Nossa Terra<br>
+                Fundamentos da Inteligência Artificial - IBM <br>
+                Git e GitHub - Curso em Vídeo<br>
+                Excel - Curso em Vídeo <br>
+            </p>
 
-        <a href="curriculoSara.pdf" download="CurriculoSara" class="btn-download">
-         Baixe aqui
-     </a>
-   
-    </div>
+            <h2 class="titulo-sessao">Objetivo Profissional</h2>
+            <p class="texto-objetivo">
+                Estudante de Análise e Desenvolvimento de Sistemas, com <br>
+                 interesse em atuar na área de Tecnologia. Busco oportunidade <br>
+                 de estágio ou vaga júnior, contribuindo para a melhoria contínua <br>
+                 dos projetos e do negócio.
+            </p>
 
-    <div class="home-img">
-      <img src="img/principal.png" alt="Foto de Sara Gabrielle">
-    </div>
-</section>
+            <a href="curriculoSara.pdf" download="CurriculoSara" class="btn-download">Baixe aqui</a>
+        </div>
+
+        <div class="home-img">
+            <div class="galeria-container profile-carousel">
+                <button class="seta btn-prev" onclick="setaScroll(this, -1)">&#10094;</button>
+                <button class="seta btn-next" onclick="setaScroll(this, 1)">&#10095;</button>
+                
+                <div class="galeria-projeto profile-gallery">
+                    <img src="img/principal.png" alt="Foto de Sara Gabrielle 1">
+                    <img src="img/natal.png" alt="Foto de Sara Gabrielle 2">
+                    <img src="img/criança.png" alt="Foto de Sara Gabrielle 3">
+                    <img src="img/aniver.png" alt="Foto de Sara Gabrielle 8">
+                    
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="competencias">
-    <div class="card-flutuante">
-        
-        <div class="coluna-experiencia">
-            <h2 class="titulo-card">Experiência</h2>
-            <h3 class="subtitulo-card">Secretária Administrativa</h3>
-            <ul>
-                <li>Organização e controle financeiro.</li>
-                <li>Atendimento ao cliente e
-                    gestão<br>  de ordens de serviço.</li>
-                <li>Apoio à organização de processos<br>  internos.</li>
-                <li>Controle e análise de informações <br> por Excel.</li>
-                <li>Suporte a sistemas internos.</li>
-            </ul>
+        <div class="card-flutuante">
+            <div class="coluna-experiencia">
+                <h2 class="titulo-card">Experiência</h2>
+                <h3 class="subtitulo-card">Secretária Administrativa</h3>
+                <ul>
+                    <li>Organização e controle financeiro.</li>
+                    <li>Atendimento ao cliente e gestão <br> ordens de serviço.</li>
+                    <li>Apoio à organização de processos <br>internos.</li>
+                    <li>Controle e análise de informações<br> por Excel.</li>
+                    <li>Suporte a sistemas internos.</li>
+                </ul>
+            </div>
+
+            <div class="coluna-habilidades">
+                <h2 class="titulo-card">Habilidades</h2>
+                <ul>
+                    <li>Metodologias ágeis</li>
+                    <li>Lógica de programação</li>
+                    <li>HTML e CSS</li>
+                    <li>Java - iniciante</li>
+                    <li>Python - iniciante</li>
+                    <li>SQL/MySQL</li>
+                    <li>Git/GitHub</li>
+                    <li>Design Figma</li>
+                </ul>
+                <a href="index_portifolio.html" class="btn-portfolio">Ver Portfólio</a>
+            </div>
         </div>
 
-        <div class="coluna-habilidades">
-            <h2 class="titulo-card">Habilidades</h2>
-            <ul>
-                <li>Metodologias ágeis</li>
-                <li>Lógica de programação</li>
-                <li>HTML e CSS</li>
-                <li>Java - iniciante</li>
-                <li>Python - iniciante</li>
-                <li>SQL/MySQL</li>
-                <li>Git/GitHub</li>
-                <li>Design Figma</li>
-            </ul>
-            <a href="index_portifolio.html" class="btn-portfolio">Ver Portfólio</a>
+        <div class="home-img img-fundo-competencias">
+            <img src="img/principal.png" alt="Foto de Sara Gabrielle">
         </div>
-
-    </div>
-
-    <div class="home-img img-fundo-competencias">
-        <img src="img/principal.png" alt="Foto de Sara Gabrielle">
-    </div>
     </section>
 
     <script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Quando o card entra na tela, adiciona a classe 'ativo'
-                entry.target.classList.add('ativo');
-            } else {
-                // Opcional: remove a classe para o efeito acontecer de novo ao subir
-                entry.target.classList.remove('ativo');
-            }
-        });
-    }, { threshold: 0.2 }); // Dispara quando 20% do card estiver visível
+        // Função para as Fotos
+        function setaScroll(botao, direcao) {
+            const galeria = botao.parentElement.querySelector('.galeria-projeto');
+            const larguraCard = galeria.offsetWidth;
+            galeria.scrollBy({
+                left: larguraCard * direcao,
+                behavior: 'smooth'
+            });
+        }
 
-    // Seleciona o card para observar
-    const card = document.querySelector('.card-flutuante');
-    observer.observe(card);
+        // Animação do Card 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('ativo');
+                } else {
+                    entry.target.classList.remove('ativo');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        const card = document.querySelector('.card-flutuante');
+        if (card) {
+            observer.observe(card);
+        }
     </script>
+
 </body>
 </html>
